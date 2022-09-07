@@ -1,8 +1,6 @@
-import {sum} from "./sum";
-import './index.scss'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
+const root = createRoot(document.querySelector('#root'));
 
-console.log(sum(1, 2));
-
-    alert(sum(2, 4));
-    alert('Hello webpack!');
+root.render(<h1> Hello React </h1>);
