@@ -1,6 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-const root = createRoot(document.querySelector('#root'));
+async function check() {
+  await fetch('https://google.com');
+}
 
-root.render(<h1> Hello React </h1>);
+check()
+  .then(() => {
+    console.log('success');
+  })
+  .catch(() => {
+    console.log('error');
+  });
